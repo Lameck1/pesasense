@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_093433) do
     t.string "name"
     t.float "amount"
     t.text "description"
-    t.bigint "group_id", null: false
+    t.bigint "group_id"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
