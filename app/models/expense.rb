@@ -6,4 +6,7 @@ class Expense < ApplicationRecord
 
   belongs_to :group, optional: true
   belongs_to :user
+
+  scope :ordered, -> {order('created_at DESC')}
+  scope :grouped, -> { includes(group) }
 end
