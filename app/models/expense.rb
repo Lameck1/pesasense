@@ -8,5 +8,6 @@ class Expense < ApplicationRecord
   belongs_to :user
 
   scope :ordered, -> {order('created_at DESC')}
-  scope :grouped, -> { includes(group) }
+  scope :grouped, -> { where.not(group_id: nil) }
+  scope :non_grouped, -> { where(group_id: nil) }
 end
