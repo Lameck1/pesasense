@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'login' => 'access#new'
   post   'login'   => 'access#create'
   delete 'logout' => 'access#destroy'
+
+  get 'external' => 'expenses#external'
   
   resources :expenses  
   resources :users
