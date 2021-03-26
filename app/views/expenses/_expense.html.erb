@@ -1,0 +1,12 @@
+<li class="bg-white p-2 my-2 w-100">
+  <div class="d-flex justify-content-between w-100">
+    <div class="d-flex w-75">
+      <%= show_expense_icon(expense) %>
+      <div class="ml-2 d-flex flex-column justify-content-between">
+        <p class="m-0 p-0 text-body"><%= expense.name %></p>
+        <p class="m-0 p-0 text-muted"><%= expense.created_at.day %>-<%= expense.created_at.month %>-<%= expense.created_at.year %> : <%= expense.user.name %></p>
+      </div>
+    </div>
+    <div class="bold">&#36;<%= expense.amount %></div>
+  </div>
+</li>

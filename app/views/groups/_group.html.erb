@@ -1,0 +1,11 @@
+<li class="bg-white p-2 my-2 w-100">
+  <div class="d-flex justify-content-between w-100">
+    <%= link_to group_path(group) do %>
+      <%= show_group_icon(group) %>
+    <% end %>
+    <div class="d-flex flex-column align-items-end justify-content-between">
+      <p class="h6"><%= group.name %></p>
+      <p class="text-muted"><%= group.created_at.day %>-<%= group.created_at.month %>-<%= group.created_at.year %></p>
+    </div>
+  </div>
+</li>

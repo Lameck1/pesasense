@@ -1,2 +1,16 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<div class="w-100 p-3">
+  <div class="bg-white p-3 rounded">
+    <h1 class="h3">New Group</h1>
+    <%= form_with(model: @group, local: true) do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, placeholder: "Group Name", class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :icon %>
+        <%= f.file_field :icon, class: "form-control" %>
+      </div>
+      <%= submit_tag("CREATE GROUP", :class=>"btn btn-success") %>
+    <% end %>
+  </div>
+</div>
