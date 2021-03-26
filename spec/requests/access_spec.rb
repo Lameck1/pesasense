@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Accesses", type: :request do
-  describe "GET /new" do
-    it "returns http success" do
-      get "/access/new"
+RSpec.describe 'Accesses', type: :request do
+  describe 'GET /new' do
+    it 'returns http success' do
+      get '/access/new'
       expect(response).to have_http_status(:success)
     end
   end
-
 end
