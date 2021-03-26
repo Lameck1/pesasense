@@ -1,10 +1,12 @@
 class AccessController < ApplicationController
-  def new; end
+  def new
+    redirect_to(root_path) if current_user
+  end
 
   def create
-    user = User.find_by_username(params[:username])
+    user = User.find_by_name(params[:name])
     if user
-      cookies[:username] = user.username
+      cookies[:name] = user.name
       session[:user_id] = user.id
       flash[:notice] = 'Log in successful'
       redirect_to(root_path)
