@@ -26,6 +26,13 @@ class ExpensesController < ApplicationController
     @expenses_total = @expenses.map(&:amount).inject(:+)
   end
 
+  def destroy
+    @expense = Expense.find(params[:id])
+    @expense.destroy
+    flash[:notice] = 'Expense deleted'
+    redirect_to(expenses_path)
+  end
+
   private
 
     def expense_params
