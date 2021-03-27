@@ -16,7 +16,7 @@ class BudgetsController < ApplicationController
       flash[:notice] = 'Budget saved!'
       redirect_to(budgets_path)
     else
-      render :new
+      render('new')
     end
   end
 
@@ -31,7 +31,7 @@ class BudgetsController < ApplicationController
       flash[:notice] = 'Budget updated'
       redirect_to(budget_path(@budget))
     else
-      render :edit
+      render('edit')
     end
   end
 
@@ -49,7 +49,7 @@ class BudgetsController < ApplicationController
 
   private
 
-    def budget_params
-      params.require(:budget).permit(:user_id, :group_id, :amount)
-    end
+  def budget_params
+    params.require(:budget).permit(:user_id, :group_id, :amount)
+  end
 end

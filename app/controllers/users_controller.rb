@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'Sign Up successful!'
       redirect_to(root_path)
     else
-      render :new
+      render('new')
     end
   end
 

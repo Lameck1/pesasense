@@ -12,7 +12,7 @@ class ExpensesController < ApplicationController
       flash[:notice] = 'Expense saved!'
       redirect_to(root_path)
     else
-      render :new
+      render('new')
     end
   end
 
@@ -35,7 +35,7 @@ class ExpensesController < ApplicationController
 
   private
 
-    def expense_params
-      params.require(:expense).permit(:name, :amount, :description, :group_id)
-    end
+  def expense_params
+    params.require(:expense).permit(:name, :amount, :description, :group_id)
+  end
 end

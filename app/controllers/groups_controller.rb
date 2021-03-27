@@ -11,7 +11,7 @@ class GroupsController < ApplicationController
       flash[:success] = "#{@group.name} group created"
       redirect_to(groups_path)
     else
-      render :new
+      render('new')
     end
   end
 

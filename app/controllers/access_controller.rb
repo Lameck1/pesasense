@@ -12,7 +12,7 @@ class AccessController < ApplicationController
       redirect_to(root_path)
     else
       flash[:alert] = 'Invalid User!'
-      render :new
+      render('new')
     end
   end
 
