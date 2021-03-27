@@ -1,0 +1,11 @@
+<div class="w-100 p-3">
+  <%= create_group_link %>
+  <div class="bg-white p-3 rounded">
+    <h1 class="h3">Update Budget</h1>
+    <%= form_with(model: @budget, local: true) do |form| %>
+      <div class="form-group">
+      <%= render(:partial => 'form', :locals => {:form => form}) %>
+      <%= form.submit("Update", :class=>"btn btn-success") %>
+    <% end %>
+  </div>
+</div>

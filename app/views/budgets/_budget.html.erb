@@ -1,0 +1,17 @@
+<li class="bg-white p-2 my-2 w-100">
+  <div class="d-flex justify-content-between w-100">
+    <div class="d-flex w-75">
+      <%= link_to budget_path(budget) do %>
+        <%= show_budget_icon(budget) %>
+      <% end %>
+      <div class="ml-2 d-flex flex-column justify-content-between">
+        <p class="m-0 p-0 text-body">Budget for: <%= budget.group.name %></p>
+        <p class="m-0 p-0 text-muted">Date Created: <%= budget.created_at.day %>-<%= budget.created_at.month %>-<%= budget.created_at.year %></p>
+      </div>
+    </div>
+    <div class="bold d-flex flex-column align-items-end justify-content-between">
+      <span>&#36;<%= budget.amount %></span>
+      <span><%= link_to 'DELETE', budget_path(budget), method: :delete %></span>
+    </div>
+  </div>
+</li>
