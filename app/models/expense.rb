@@ -1,5 +1,5 @@
 class Expense < ApplicationRecord
-  validates :name, length: { in: 4..20 }, presence: true
+  validates :name, length: { in: 4..40 }, presence: true
   validates :amount, numericality: true, presence: true
   validates :user_id, presence: true
 
