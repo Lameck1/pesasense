@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    name { 'MyString' }
-    icon { 'MyString' }
+    name { Faker::Name.name }
+    icon { Faker::Avatar.image }
   end
 end
