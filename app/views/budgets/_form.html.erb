@@ -1,7 +1,6 @@
 <div class="form-group">
   <%= form.label :group %>
-  <%= form.select :group_id, options_from_collection_for_select(@groups, :id, :name), {:include_blank => 'Choose a group'}, {class: "form-control"} %>
-</div>
+  <%= collection_select(:budget, :group_id, @groups, :id, :name, { :prompt => 'Choose Group' }, class: "form-control" ) %></div>
 <div class="form-group">
   <%= form.label :amount %>
   <%= form.number_field :amount, placeholder: "Amount", id: "amount", class: "form-control" %><br>

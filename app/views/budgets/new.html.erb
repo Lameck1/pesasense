@@ -6,6 +6,7 @@
       <div class="form-group">
       <%= render(:partial => 'form', :locals => {:form => form}) %>
       <%= form.submit("Add", :class=>"btn btn-success") %>
+      <%= error_messages_for(form.object) %>
     <% end %>
   </div>
 </div>

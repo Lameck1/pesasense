@@ -7,6 +7,9 @@
         <p class="m-0 p-0 text-muted"><%= expense.created_at.day %>-<%= expense.created_at.month %>-<%= expense.created_at.year %> : <%= expense.user.name %></p>
       </div>
     </div>
-    <div class="bold">&#36;<%= expense.amount %></div>
+    <div class="bold d-flex flex-column align-items-end justify-content-between">
+      <span>&#36;<%= expense.amount %></span>
+      <span><%= link_to 'DELETE', expense_path(expense), method: :delete %></span>
+    </div>
   </div>
 </li>

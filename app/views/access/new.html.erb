@@ -1,12 +1,12 @@
 <div class="w-100 p-3">
   <div class="bg-white p-3 rounded">
     <h1 class="h3">Login</h1>
-    <%= form_with url: login_path do |f| %>
+    <%= form_with url: login_path do |form| %>
       <div class="form-group">
-        <%= f.label :name %>
-        <%= f.text_field :name, class: "form-control" %>
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control" %>
       </div>
-      <%= f.submit "Log In", class: "btn btn-primary" %>
+      <%= form.submit "Log In", class: "btn btn-primary" %>
     <%end%>
 
     <p class="pt-4"> Don't have an account?: <span><%= link_to "Sign Up", new_user_path, class: "text-primary h5 nav-item text-decoration-none"%></span></p>
