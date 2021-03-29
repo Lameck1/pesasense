@@ -16,7 +16,7 @@ Pesa-Sense is a small Ruby on Rails mobile web application that helps signed-up 
 
 ![screenshot](./screenshot.png)
 
-## [Live Demo Coming Soon]
+## [Live Demo](https://pesasense.herokuapp.com/)
 
 ## Built With
 
