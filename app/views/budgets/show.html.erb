@@ -1,0 +1,12 @@
+<ul class="groups-list w-100 p-2 m-0">
+  <%= render @budget %>
+</ul>
+
+<div class="w-100 bg-white d-flex flex-column align-items-center justify-content-between rounded p-3">
+  <span class="text-info h3">Budget Report:</span>
+  <%= budget_report(@budget, @budget_group_total) %>
+</div>
+
+<div class="w-100 bg-success add-exp d-flex flex-column align-items-stretch justify-content-center p-3 fixed-bottom">
+  <%= link_to 'EDIT BUDGET', edit_budget_path, :class=>"text-center text-white text-decoration-none border border-white border-3 rounded p-3 h6" %>
+</div>

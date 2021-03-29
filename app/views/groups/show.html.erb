@@ -1,0 +1,10 @@
+<div class="w-100 bg-white d-flex align-items-center justify-content-between p-3">
+    <span class="text-muted">Group amount:</span>
+    <span class="bold">&#36;<%= @group_total %></span>
+  </div>
+<ul class="groups-list w-100 p-2 m-0">
+  <%= render @group.expenses %>
+</ul>
+<div class="w-100 bg-success add-exp d-flex flex-column align-items-stretch justify-content-center p-3 fixed-bottom">
+  <%= link_to 'ADD NEW EXPENSE', new_expense_path, :class=>"text-center text-white text-decoration-none border border-white border-3 rounded p-3 h6" %>
+</div>
