@@ -6,6 +6,13 @@ GIT
     faker (2.17.0)
       i18n (>= 1.6, < 2)
 
+GIT
+  remote: https://github.com/mimemagicrb/mimemagic
+  revision: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
+  ref: 01f92d8
+  specs:
+    mimemagic (0.3.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -117,7 +124,6 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
-    mimemagic (0.3.5)
     mini_mime (1.0.2)
     minitest (5.14.4)
     msgpack (1.4.2)
@@ -246,6 +252,7 @@ DEPENDENCIES
   faker!
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  mimemagic (= 0.3.5)!
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
