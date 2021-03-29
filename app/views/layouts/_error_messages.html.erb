@@ -1,0 +1,7 @@
+<% if object && object.errors.size > 0 %>
+  <ul class="bg-light p-0 m-0 rounded">
+    <% object.errors.full_messages.each do |msg| %>
+      <li class="p-1 m-1 h6 text-info"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
