@@ -22,6 +22,7 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @group_total = @group.expenses.map(&:amount).inject(:+)
+    @expenses = Expense.includes(:group, :user).where(group_id: @group.id).order('created_at DESC')
   end
 
   private
