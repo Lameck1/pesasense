@@ -16,7 +16,7 @@ Pesa-Sense is a small Ruby on Rails mobile web application that helps signed-up 
 
 ![screenshot](./screenshot.png)
 
-## [Live Demo Coming Soon]
+## [Live Demo](https://pesasense.herokuapp.com/)
 
 ## Built With
 
@@ -58,6 +58,16 @@ Pesa-Sense is a small Ruby on Rails mobile web application that helps signed-up 
         ```
 
   - This is optional, but you can run ```rails db:seed``` to quickly get setup with sample data for testing the app.
+
+    ## IMPORTANT =>
+    
+    Depending on the state of your local rails installation, just in case you get the following error:
+
+    ```
+    Webpacker::Manifest::MissingEntryError in Access#new
+    ```
+
+    run ```yarn add webpack``` to solve the error
 
 * To interact with the project, run:
     ```
