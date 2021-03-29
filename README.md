@@ -103,7 +103,7 @@ Feel free to check the [issues page](https://github.com/Lameck1/pesasense/issues
 Credits go to the following for providing guides on Ruby on Rails
   - [**Rails Guides**](https://guides.rubyonrails.org)
 
-Credits also to Microver for task and project design provision.
+Credits also to Microverse for task and project design provision.
 
 ## Show your support
 
