@@ -8,7 +8,7 @@
       </div>
       <div class="form-group">
         <%= form.label :icon %>
-        <%= form.file_field :icon, accept: 'image/png, image/gif, image/jpeg', class: "form-control" %>
+        <%= form.file_field :icon, accept: 'image/png, image/gif, image/jpeg', class: "form-control", direct_upload: true %>
       </div>
       <%= submit_tag("CREATE GROUP", :class=>"btn btn-success") %>
       <%= error_messages_for(form.object) %>
