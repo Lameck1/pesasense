@@ -1,7 +1,7 @@
 module ExpensesHelper
   def show_expense_icon(exp)
     if exp.group
-      "<div class='p-0 m-0'> #{image_tag(exp.group.icon, class: 'group-icon  p-0 m-0')}</div>".html_safe
+      "<div class='p-0 m-0'> #{image_tag(cloudinary_url(exp.group.icon.key), class: 'group-icon  p-0 m-0')}</div>".html_safe
     else
       "<div class='p-0 m-0'> #{content_tag :p, '!?',
                                            class: 'group-icon  p-0 m-0 text-center h1'}</div>".html_safe

@@ -1,6 +1,6 @@
 module BudgetsHelper
   def show_budget_icon(budget)
-    "<div class='p-0 m-0'> #{image_tag(budget.group.icon, class: 'group-icon  p-0 m-0')}</div>".html_safe
+    "<div class='p-0 m-0'> #{image_tag(cloudinary_url(budget.group.icon.key), class: 'group-icon  p-0 m-0')}</div>".html_safe
   end
 
   def budget_report(budget, group_total)
